@@ -2,40 +2,15 @@ body {
   background-color: #21222c;
 }
 
+.dead-space {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #131fa1;
+  opacity: 0;
+  z-index: 10;
+}
+
 /* 👇👇👇 Paste the styles of your Fancy Robot from the "Position it right" assignment here 👇👇👇 */
-
-.robot-container {
-}
-
-.robot-face-shape {
-}
-
-.robot-eye-left {
-}
-
-.robot-eye-right {
-}
-
-.robot-ear-left {
-}
-
-.robot-ear-right {
-}
-
-.robot-nose {
-}
-
-.robot-nose:before {
-}
-
-.robot-nose:after {
-}
-
-.robot-teeth {
-}
-
-.robot-tooth {
-}
-
-.robot-hair-style {
-}

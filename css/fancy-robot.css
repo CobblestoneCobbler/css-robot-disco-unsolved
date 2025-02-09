@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+/* I had made the robot after Mother, from the movie I am Mother, before reading the specific requirements.
+  this made a few components not match up: left/right eye (only one), teeth (she uses 2 lights to "smile"), 
+  nose, hair, and ears (I used her side frames as ears). Her info panel has lights to mimic how teeth are positioned,
+  and her console has an image of water drops instead of a console since I couldnt find one on lorem picsum or
+  another CDN service. The quote was added because I felt it was more fitting for the em units requirement */
+
+.robot-container {
+  height: 3000px;
+  margin: 10%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ears are just the side frame work to the head */
+.ears {
+  width: 310px;
+  height: 300px;
+  background-color: #aaaaaa;
+  border-top-right-radius: 30% 50px;
+  border-top-left-radius: 30% 50px;
+  border-bottom-right-radius: 10px 200px;
+  border-bottom-left-radius: 10px 200px;
+  margin-bottom: -300px;
+}
+.above-head {
+  width: 300px;
+  height: 50px;
+  background: linear-gradient(to bottom, #444444, #999999);
+  border-left: 20px solid #111111;
+  border-right: 20px solid #111111;
+  border-top-right-radius: 30% 50px;
+  border-top-left-radius: 30% 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* linear gradient */
+.head-container {
+  background: linear-gradient(to bottom, #999999, #444444);
+  width: 300px;
+  height: 400px;
+  border-left: 20px solid #111111;
+  border-right: 20px solid #111111;
+  border-bottom-left-radius: 10% 400px;
+  border-bottom-right-radius: 10% 400px;
+  margin-top: -2px;
+}
+/* rectangle, percentage*/
+#face-plate-inlay {
+  background-color: #000000;
+  width: 40%;
+  height: 350px;
+  margin-bottom: -350px;
+  border-bottom-right-radius: 10% 400px;
+  border-bottom-left-radius: 10% 400px;
+}
+#above-head-inlay {
+  background-color: #000000;
+  width: 40%;
+  height: 100%;
+  border-top-right-radius: 30% 50px;
+  border-top-left-radius: 30% 50px;
+}
+
+.face-plate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.face-plate * {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.face-plate-upper,
+.face-plate-lower {
+  width: 300px;
+  height: 100px;
+}
+.face {
+  flex-direction: column;
+  align-items: center;
+}
+/* optional shape, semi-circle */
+.mouth {
+  width: 250px;
+  height: 100px;
+  background-color: #000000;
+  border-radius: 0% 0% 100px 100px;
+
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+
+  animation-name: mouth-slider;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+/*  radial gradient, circles for lights*/
+.light {
+  background: radial-gradient(#ffffff, #999999, #444444, #000000) center/200px
+    200px;
+  border: 2px solid;
+  border-radius: 50%;
+  z-index: 2;
+}
+.eye {
+  width: 100px;
+  height: 100px;
+  margin-bottom: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* resued but since theyre circles its pointless to reorient*/
+.mouth-dot,
+.pupil {
+  width: 40px;
+  height: 40px;
+}
+
+#pupil {
+  outline: 10px solid #999999;
+  border-color: #aaaaaa;
+  animation-name: eye-idle;
+  animation-timing-function: linear;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#operating {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 35px;
+  top: 50px;
+  animation-name: light-idle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.neck-container {
+  background-color: #000000;
+  width: 500px;
+  height: 200px;
+  margin-top: -125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: -2;
+  border: 20px solid #000000;
+  border-radius: 250px / 50px;
+}
+
+.neck {
+  width: 520px;
+  height: 95px;
+  margin-right: -10px;
+  margin-left: -10px;
+  border-left: 50px solid #aaaaaa;
+  border-right: 50px solid #aaaaaa;
+  border-radius: 5px;
+}
+#neck-lower {
+  height: 150px;
+  margin-bottom: -20px;
+  border-bottom: 25px solid #aaaaaa;
+  border-bottom-right-radius: 100px 50px;
+  border-bottom-left-radius: 100px 50px;
+  z-index: 1;
+}
+#neck-upper {
+  margin-top: -10px;
+  border-top-right-radius: 25px 50px;
+  border-top-left-radius: 25px 50px;
+}
+/*oval*/
+#neck-swivel {
+  width: 150px;
+  height: 200px;
+  margin-top: -200px;
+  background-color: #000000;
+  border: 10px solid #444444;
+  border-radius: 50px / 100px;
+  z-index: -1;
+}
+.shoulders-container {
+  width: 1000px;
+  height: 500px;
+  margin-top: -80px;
+  margin-bottom: 100px;
+  background-color: #000000;
+  border-radius: 50px 50px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: -3;
+}
+#shoulder-pads {
+  width: 1050px;
+  height: 100px;
+  margin: -40px;
+  border-left: 250px solid #aaaaaa;
+  border-right: 250px solid #aaaaaa;
+  border-top-right-radius: 45px 50px;
+  border-top-left-radius: 45px 50px;
+}
+.info-panel {
+  background-color: #111111;
+  width: 600px;
+  height: 100px;
+  margin-top: 60px;
+  padding: 5px;
+  border: 2px solid #222222;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+/* transparency */
+#chest-heater-plate {
+  width: 550px;
+  height: 300px;
+  border-radius: 100px / 50px;
+  margin-top: 10px;
+}
+
+.heater-plate {
+  z-index: 10;
+  background-color: #eeeeee;
+  opacity: 0.5;
+  transition-duration: 5s;
+}
+
+.robot-container:hover .shoulders-container .heater-plate {
+  background-color: rgb(205, 140, 15);
+}
+
+#camera {
+  background-color: #000000;
+  border: 7px double #222222;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+/* use img, couldn't find an image of a terminal :(  */
+#console {
+  background-color: #ffffff;
+  background-image: url(https://picsum.photos/id/41/200/300);
+  background-size: contain;
+  background-position: center;
+  min-width: 200px;
+  height: 80px;
+  flex: 1;
+}
+#mid-line {
+  width: 50px;
+  height: 100px;
+  border-left: 2px solid #000000;
+  border-right: 30px solid #444444;
+}
+.light-panel {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+.square {
+  background-color: #222222;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+/* similar to teeth */
+.status {
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 60px;
+}
+.status:nth-of-type(2n) {
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.status:nth-of-type(2n + 1) {
+  animation-name: light-idle;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#upper-status {
+  margin: 0;
+  position: absolute;
+  top: 650px;
+  left: 850px;
+  animation: 20s linear 0s infinite alternate both running upper-status-idle;
+  z-index: 20;
+}

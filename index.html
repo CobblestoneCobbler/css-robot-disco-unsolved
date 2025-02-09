@@ -3,40 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/fancy-robot.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
     <title>Fancy Robot Face</title>
   </head>
   <body>
+    <header></header>
     <div class="robot-container">
-      <div class="robot-face-shape">
-        <div class="robot-eye-left"></div>
-        <div class="robot-eye-right"></div>
-        <div class="robot-nose"></div>
-        <div class="robot-teeth">
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
-          <div class="robot-tooth"></div>
+      <div class="ears"></div>
+      <div class="above-head">
+        <div id="above-head-inlay"></div>
+      </div>
+      <div class="head-container">
+        <div class="face-plate">
+          <div id="face-plate-inlay"></div>
+          <div class="face-plate-upper"></div>
+          <div class="face">
+            <div class="eye light">
+              <div class="pupil light" id="pupil"></div>
+            </div>
+            <div class="mouth">
+              <div class="mouth-dot light" id="mouth-left"></div>
+              <div class="mouth-dot light" id="mouth-right"></div>
+            </div>
+          </div>
+          <div class="face-plate-lower">
+            <div class="light" id="operating"></div>
+            <!-- inlay should end above container end to make chin -->
+          </div>
         </div>
       </div>
-      <div class="robot-ear-left"></div>
-      <div class="robot-ear-right"></div>
-      <div class="robot-hair-style">
-        <div class="robot-hair-one"></div>
-        <div class="robot-hair-two"></div>
-        <div class="robot-hair-three"></div>
-        <div class="robot-hair-two"></div>
-        <div class="robot-hair-one"></div>
+      <div class="neck-container">
+        <div class="neck" id="neck-upper"></div>
+        <div class="neck" id="neck-lower"></div>
+      </div>
+      <div id="neck-swivel"></div>
+      <div class="shoulders-container">
+        <div id="shoulder-pads"></div>
+        <div class="info-panel">
+          <div id="camera"></div>
+          <div id="console"></div>
+          <div id="mid-line"></div>
+          <div class="light-panel">
+            <div class="square"></div>
+            <div class="status light"></div>
+            <div class="status light"></div>
+            <div class="status light"></div>
+            <div class="status light"></div>
+            <div class="status light"></div>
+            <div class="status light" id="upper-status"></div>
+          </div>
+        </div>
+        <div class="heater-plate" id="chest-heater-plate"></div>
       </div>
     </div>
+    <div class="dead-space"></div>
   </body>
 </html>
