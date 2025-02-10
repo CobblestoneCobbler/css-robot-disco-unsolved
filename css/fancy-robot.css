@@ -5,10 +5,9 @@
   this made a few components not match up: left/right eye (only one), teeth (she uses 2 lights to "smile"), 
   nose, hair, and ears (I used her side frames as ears). Her info panel has lights to mimic how teeth are positioned,
   and her console has an image of water drops instead of a console since I couldnt find one on lorem picsum or
-  another CDN service. The quote was added because I felt it was more fitting for the em units requirement */
+  another CDN service. */
 
 .robot-container {
-  height: 3000px;
   margin: 10%;
   margin-top: 100px;
   display: flex;
@@ -265,6 +264,11 @@
   min-width: 200px;
   height: 80px;
   flex: 1;
+  animation-name: console-idle;
+  animation-duration: 40s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 #mid-line {
   width: 50px;
@@ -284,6 +288,11 @@
   width: 50px;
   height: 50px;
   margin-top: 20px;
+  animation-name: red-pulse;
+  animation-duration: 7s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 /* similar to teeth */
 .status {

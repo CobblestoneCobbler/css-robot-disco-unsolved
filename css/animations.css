@@ -149,3 +149,27 @@
     transform: rotate(0);
   }
 }
+
+@keyframes red-pulse {
+  from {
+    background-color: #222222;
+  }
+  to {
+    background-color: #940505;
+  }
+}
+
+@keyframes console-idle {
+  0%,
+  15% {
+    background-position: left;
+  }
+  45%,
+  60% {
+    background-position: center;
+  }
+  90%,
+  100% {
+    background-position: right;
+  }
+}
